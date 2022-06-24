@@ -1,5 +1,5 @@
 import '../styles/styles.scss';
-
+import 'animate.css';
 function MyApp({ Component, pageProps }) {
   
   return (<>

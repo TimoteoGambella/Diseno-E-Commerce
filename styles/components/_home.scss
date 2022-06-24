@@ -15,13 +15,16 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-
+        position: relative;
 
         h1{
             margin: 1em 0 0 1em;
             font-size: 10vw;
             color: #FB9650;
+            animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+            animation-duration: 2s;
         }
+
     }
 
 
@@ -37,8 +40,9 @@
             text-decoration: none;
             font-size: 7vw;
             color: #FB9650;
-            transition: all 0.4s ease;
-
+            animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
+            animation-duration: 1s;
+            transition: all 0.5s ease;
             &:hover{
                 color: white;
             }
@@ -60,3 +64,16 @@
 
     }
 }
+
+
+  .waviy {
+    position: relative;
+  }
+  .waviy span {
+    
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
