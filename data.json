@@ -1,0 +1,49 @@
+{
+    "productos" : [
+        {
+            "nombre": "Buzo con capucha",
+            "descripcion": "Buzo con capuchon para el frio",
+            "talles": ["XS","S","L","XL","XXL"],
+            "precio": "100$",
+            "colores": ["azul", "violeta", "naranja"],
+            "tipoPrenda": "Oversize",
+            "img" : "./public/img/buzos.jpeg"
+        },
+        {
+            "nombre": "Buzo Malone",
+            "descripcion": "Buzo para el frio bien malone",
+            "talles": ["XS","S","L","XL","XXL"],
+            "precio": "50$",
+            "colores": ["azul", "violeta", "naranja"],
+            "molderia": "Oversize",
+            "img" : "./public/img/buzos2.jpeg"
+        },
+        {
+            "nombre": "Remesa Malcom",
+            "descripcion": "Una remerita tranqui",
+            "talles": ["XS","S","L","XL","XXL"],
+            "precio": "10$",
+            "colores": ["azul", "violeta", "naranja"],
+            "tipoPrenda": "Oversize",
+            "img" : "./public/img/carreteRemeras.jpeg"
+        },
+        {
+            "nombre": "Denim Versalles",
+            "descripcion": "Jeans que te ajustan el canario",
+            "talles": ["32","36","38","40","42"],
+            "precio": "2$",
+            "colores": ["azul", "violeta", "naranja"],
+            "tipoPrenda": "Skinny fit",
+            "img" : "./public/img/jeans2.jpeg"
+        },
+        {
+            "nombre": "Joggers Versalles",
+            "descripcion": "Joggin facherito",
+            "talles": ["32","36","38","40","42"],
+            "precio": "2$",
+            "colores": ["azul", "violeta", "naranja"],
+            "tipoPrenda": "Skinny fit",
+            "img" : "./public/img/babuchas.jpeg"
+        }
+    ]
+}

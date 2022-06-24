@@ -1,0 +1,20 @@
+.tienda-container{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    --opacidad-negro: 0.5;
+    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../../public/img/local3.jpeg");
+    background-size: cover;
+
+    .tienda{
+        margin: 4em;
+        width: 100%;
+        display: grid;
+        grid-template-columns:repeat(4,auto);
+        grid-gap: 2em;
+
+
+    }
+}

@@ -1,0 +1,24 @@
+
+// TABLET
+@media (min-width: 550px) and (max-width: 900px) {
+  
+  .tienda-container{
+    .tienda{
+      grid-template-columns:repeat(2,auto);
+
+    }
+  }
+}
+
+
+// MOBILE
+
+@media (min-width: 200px) and (max-width: 550px) {
+  .tienda-container{
+    .tienda{
+      grid-template-columns:repeat(1,auto);
+
+    }
+  }
+}
+
