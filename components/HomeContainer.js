@@ -12,8 +12,8 @@ const HomeContainer = () => {
 
 
             <div className='home-nav'>
-                <Link href="/Nosotros">Nosotros</Link>
-                <Link href="/Tienda">Tienda</Link>
+                <Link href="/Nosotros">NOSOTROS</Link>
+                <Link href="/Tienda">TIENDA</Link>
             </div>
         </div>
     );

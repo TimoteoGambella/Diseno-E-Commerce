@@ -1,24 +1,54 @@
-
-// TABLET
-@media (min-width: 550px) and (max-width: 900px) {
-  
-  .tienda-container{
-    .tienda{
-      grid-template-columns:repeat(2,auto);
-
-    }
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
   }
 }
 
-
-// MOBILE
-
-@media (min-width: 200px) and (max-width: 550px) {
-  .tienda-container{
-    .tienda{
-      grid-template-columns:repeat(1,auto);
-
-    }
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1200px) {
+    @content;
   }
 }
 
+@mixin mobile {
+  @media (min-width: 200px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mini-mobile {
+  @media (min-width: 200px) and (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin desktop-coll {
+  @media (min-width: 1201px) and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin desktop-1400 {
+  @media (min-width: 1281px) and (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin tablet-bp {
+  @media (min-width: 768px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+// Breakpoint in pinna detail. Between tablet and mobile.
+@mixin detail-bp {
+  @media (min-width: 200px) and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin sticky-btn-adjust {
+  @media (min-width: 200px) and (max-width: 540px) {
+    @content;
+  }
+}

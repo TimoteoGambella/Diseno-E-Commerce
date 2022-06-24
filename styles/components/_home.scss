@@ -14,12 +14,13 @@
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
 
 
         h1{
+            margin: 1em 0 0 1em;
             font-size: 10vw;
-            color: brown;
+            color: #FB9650;
         }
     }
 
@@ -35,7 +36,7 @@
         a{
             text-decoration: none;
             font-size: 7vw;
-            color: brown;
+            color: #FB9650;
             transition: all 0.4s ease;
 
             &:hover{
