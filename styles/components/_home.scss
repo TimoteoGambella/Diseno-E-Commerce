@@ -1,46 +1,24 @@
 .home-container{
     width: 100%;
     height: 100vh;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
 
     --opacidad-negro: 0.5;
     background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../../public/img/local4.jpeg");
     background-size: cover;
     overflow: hidden;
-
-    .home-title{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        position: relative;
-
-        h1{
-            font-weight: bold;
-            margin: 1em 0 0 1em;
-            font-size: 10vw;
-            color: #FB9650;
-            animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
-            animation-duration: 2s;
-        }
-
-    }
-
-
     .home-nav{
         width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
         margin: 0 5em 5em 0;
-    
+        padding-right: 4em;
+        padding-bottom: 3em;
         a{
             text-decoration: none;
-            font-size: 7vw;
+            font-size: 6vw;
             color: #FB9650;
             animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
             animation-duration: 1s;
@@ -63,19 +41,5 @@
             --opacidad-negro: 0.5;
             background: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro)));
         }
-
     }
 }
-
-
-  .waviy {
-    position: relative;
-  }
-  .waviy span {
-    
-  }
-  @keyframes flip {
-    0%,80% {
-      transform: rotateY(360deg) 
-    }
-  }
