@@ -7,7 +7,7 @@ const HomeContainer = () => {
         <div className='home-container'>
             <div className='home-nav'>
                 <Link href="/Nosotros">NOSOTROS</Link>
-                <Link href="/Tienda">TIENDA</Link>
+                <Link href="/Tienda">PRODUCTOS</Link>
             </div>
         </div>
     );

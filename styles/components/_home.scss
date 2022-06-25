@@ -3,6 +3,7 @@
     height: 100vh;
 
     --opacidad-negro: 0.5;
+    
     background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../../public/img/local4.jpeg");
     background-size: cover;
     overflow: hidden;

@@ -2,19 +2,26 @@
     height: 80vh;
     width: 100%;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
     --opacidad-negro: 0.5;
-    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../../public/img/local3.jpeg");
-    background-size: cover;
+
+
+
+    .title-container{
+        font-size: 2vw;
+        margin: 2em;
+        color: antiquewhite;
+    }
 
     .tienda{
-        margin: 4em;
         width: 100%;
-        display: grid;
-        grid-template-columns:repeat(4,auto);
-        grid-gap: 2em;
-
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
 
     }
 }
