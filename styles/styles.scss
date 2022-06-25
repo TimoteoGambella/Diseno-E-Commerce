@@ -22,3 +22,15 @@
     background-color: #2d2828;
 }
 
+*::-webkit-scrollbar {
+    width: 6px;
+    margin:10px;
+}
+*::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 2vw;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgb(98, 96, 96);
+}
