@@ -40,7 +40,7 @@ const TiendaContainer = ({itemType, setItemType}) => {
     return (
         <div className="tienda-container">
 
-            <div className="title-container">
+            <div className="tienda-title-container">
                     <h1>{itemType}</h1>
             </div>
 

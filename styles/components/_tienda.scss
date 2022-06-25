@@ -1,5 +1,5 @@
 .tienda-container{
-    height: 80vh;
+    min-height: 80vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -9,7 +9,7 @@
 
 
 
-    .title-container{
+    .tienda-title-container{
         font-size: 2vw;
         margin: 2em;
         color: antiquewhite;
@@ -18,7 +18,6 @@
     .tienda{
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;

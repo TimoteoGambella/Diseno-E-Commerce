@@ -8,22 +8,25 @@
 
     .navbar-nav{
       width: 100%;
-      background: linear-gradient(55deg,#bfa48b,#6f4218,#6f4218,#bfa48b);
+      // background: linear-gradient(55deg,#bfa48b,#6f4218,#6f4218,#bfa48b);
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: row;
+      margin-top: 1em;
 
       button{
         background-color: transparent;
+        border-color: white;
+        color: white;
         margin: 1em;
         padding: 0.5em;
         transition: all 0.2s ease;
-
+        font-size: 1.6vw;
         &:hover{
           // background-color: rgba(173, 66, 66, 0.782);
-          border-color: white;
-          color: white;
+          border-color: #edc85b;
+          color: #edc85b;
         }
       }
     }   
