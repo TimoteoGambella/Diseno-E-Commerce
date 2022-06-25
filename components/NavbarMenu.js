@@ -9,7 +9,7 @@ const NavbarMenu = ({handleRanking}) => {
         <div className="navbar-container">
 
                 <div className="navbar-nav">
-                    <button onClick={() => push("/")}>Nosotros</button>
+                    <button onClick={() => push("/Nosotros")}>Nosotros</button>
                     <button onClick={() => push("/Tienda")}>Productos</button>
                 </div>
 
