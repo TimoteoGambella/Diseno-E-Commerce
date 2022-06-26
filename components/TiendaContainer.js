@@ -3,6 +3,7 @@ import CardProducto from '../components/CardProducto';
 import Image from "next/image";
 import { getProductos } from '../firebase/FirebaseDB';
 import loading from "../public/loading_icon.webp";
+import Dropdown from './Dropdown';
 
 
 const TiendaContainer = ({itemType, setItemType}) => {
@@ -41,6 +42,7 @@ const TiendaContainer = ({itemType, setItemType}) => {
         <div className="tienda-container">
 
             <div className="tienda-title-container">
+                    <Dropdown setItemType={setItemType} itemType={itemType}/>
                     <h1>{itemType}</h1>
             </div>
 
