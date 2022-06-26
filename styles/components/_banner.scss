@@ -23,16 +23,18 @@
     }
 }
 .ban{
-    background-image: url("../../public/img/BENET\ \(2\).png");
-    background-position: center;
+    background-image: url("../../public/img/BENET (2).png");
+    background-position:center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     .container-titulo{
         h1{
-            height: 220px;
+            height: 250px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 8rem;
-            color: #292929;
+            // color: #292929;
+            color: black;
             letter-spacing: .1em;
             text-shadow: 
               -1px -1px 3px #373636, 
