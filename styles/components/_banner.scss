@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     --opacidad-negro: 0.5;
-    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../../public/img/Diseño\ sin\ título\ \(1\).png");
+    // background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../../public/img/Diseño\ sin\ título\ \(1\).png");
 
     // background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),url("../../public/img/Diseño\ sin\ título\ \(1\).png");
     width: 100%;
@@ -18,6 +18,25 @@
             text-shadow: 
               -1px -1px 3px #5a4b3d, 
               3px 3px 5px #5a4b3d;
+              cursor: pointer;
+        }
+    }
+}
+.ban{
+    background-image: url("../../public/img/BENET\ \(2\).png");
+    background-position: center;
+    .container-titulo{
+        h1{
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+            color: #292929;
+            letter-spacing: .1em;
+            text-shadow: 
+              -1px -1px 3px #373636, 
+              3px 3px 5px #373636;
               cursor: pointer;
         }
     }

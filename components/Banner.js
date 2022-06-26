@@ -4,7 +4,7 @@ export default function Banner(){
     const { push } = useRouter();
 
     return (
-        <div className="banner">
+        <div className="ban">
             {/* <h1 className='tituloMobile'>BENET</h1> */}
             
             <div className='container-titulo'>
