@@ -47,16 +47,12 @@ const TiendaContainer = ({itemType, setItemType}) => {
                 {/* <Dropdown setItemType={setItemType} itemType={itemType}/> */}
                 <button onClick={() => setItemType("Todo")}>Todo</button>
                 <button onClick={() => setItemType("Remeras")}>Remeras</button>
-                <button onClick={() => setItemType("Jeans")}>Jeans</button>
+                <button onClick={() => setItemType("Joggins")}>Joggins</button>
                 <button onClick={() => setItemType("Camperas")}>Camperas</button>
             </div>
 
             <div className="tienda">
-
-            {itemType === "Todo" 
-            ? productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) 
-            :  productos.filter(prod => prod.Categoria === itemType).map(producto => <CardProducto producto={producto} key={producto.id}></CardProducto>)}
-        
+                {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
             </div>
         
             {totalProductos>mostrarMas?

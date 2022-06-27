@@ -22,8 +22,9 @@ export const getProductos = async(cat,limite) =>{
   if(cat==="Todo"){
     var productosDocs = await getDocs(query(collection(db,"Productos"),limit(limite)));
   }else{
-    var productosDocs = await getDocs(query(collection(db,"Productos"),where("Categoria","==",cat),limit(limite)));
+    var productosDocs = await getDocs(query(collection(db,"Productos"),where("tipo","==",cat),limit(limite)));
   }
+  
   const productos = productosDocs.docs.map(doc=>{return{id:doc.id,...doc.data()}})
   return(productos)
 }
