@@ -40,7 +40,7 @@ const TiendaContainer = ({itemType, setItemType}) => {
 
     return (<>
         <div className='tienda-title'>
-            <h1>{itemType}</h1>
+            <h1>{itemType.toUpperCase()}</h1>
         </div>
         <div className="tienda-container">
             <div className="tienda-tabs-container">

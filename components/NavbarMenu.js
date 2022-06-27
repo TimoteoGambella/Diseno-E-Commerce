@@ -8,7 +8,7 @@ const NavbarMenu = ({handleRanking}) => {
     return (
         <div className="navbar-container">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className='background-nav'>
-                    <path fill="#2B2B2B" fill-opacity="1" d="M0,256L1440,128L1440,0L0,0Z"></path>
+                    <path fill="#00000" fill-opacity="1" d="M0,256L1440,128L1440,0L0,0Z"></path>
                 </svg>
 
                 <div className="navbar-nav">

@@ -5,8 +5,7 @@
 }
 
 .tienda-container{
-    
-    min-height: 80vh;
+    min-height: 100\vh;
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -24,16 +23,18 @@
         justify-content: center;
         flex-direction: column;
 
+
         .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select{
             background-color: white;
         }
 
         button{
             margin: 0.5em;
-            background-color: transparent;
             border-color: #d1b797;
             color: #d1b797;
-
+            transition: all 0.4s ease;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;    transition: all 0.5s ease;
+            background-color: black;
             &:hover{
                 // background-color: rgba(173, 66, 66, 0.782);
                 box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
@@ -45,10 +46,12 @@
 
     .tienda{
         width: 100%;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        border-left: 1px solid white;
 
     }
 }
