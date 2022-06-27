@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react';
 import { useRouter } from 'next/router';
 import Image from "next/image"
-import logo from "../../public/img/8e30faa8-c98b-4c4d-8cb7-1a0440f7b3af-modified.png"
+import logo from "../../public/img/logo.png"
 
 // NAVBAR DE RANKING COMPONENT
 const NavbarMenu = ({handleRanking}) => {
