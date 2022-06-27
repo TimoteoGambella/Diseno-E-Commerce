@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Banner from '../components/Banner';
 import NavbarMenu from '../components/NavbarMenu';
 import TiendaContainer from '../components/TiendaContainer';
@@ -6,6 +6,11 @@ import TiendaContainer from '../components/TiendaContainer';
 export default function Tienda() {
   const [itemType, setItemType] = useState("Todo");
 
+  const scrollRef = useRef(null)
+
+  useEffect(() => {
+    scrollRef.current.scrollIntoView({ behavior: "smooth" });
+  }, [itemType]);
 
   return (
 
@@ -17,9 +22,7 @@ export default function Tienda() {
       
       <NavbarMenu/>
 
-      <TiendaContainer itemType={itemType} setItemType={setItemType}/>
-
-
+      <TiendaContainer itemType={itemType} setItemType={setItemType} scrollRef={scrollRef}/>
       
     </div>
   )

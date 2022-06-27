@@ -6,7 +6,7 @@ import loading from "../public/loading_icon.webp";
 import Dropdown from './Dropdown';
 
 
-const TiendaContainer = ({itemType, setItemType}) => {
+const TiendaContainer = ({itemType, setItemType,scrollRef}) => {
 
     const [productos, setProductos] = useState([]);
     const [totalProductos, setTotalProductos] = useState(0);
@@ -54,7 +54,7 @@ const TiendaContainer = ({itemType, setItemType}) => {
 
             <div className="tienda">
                 {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
-                
+                {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
             </div>
         
             {totalProductos>mostrarMas?
@@ -70,6 +70,7 @@ const TiendaContainer = ({itemType, setItemType}) => {
             } 
             </>:<></>
             }
+            <div ref={scrollRef}></div>
         </div>
     </>
     )
