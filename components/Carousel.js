@@ -1,27 +1,17 @@
-import React,{useEffect, useState} from 'react';
-import Image from 'next/image';
-
-
+import React from 'react';
 
 const Carousel = () => {
-    const [counter, setCounter] = useState(1);
-    const [srcImage, setSrcImage] = useState("");
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCounter(counter + 1);
-            setSrcImage(`../public/img/comboBenet${counter}.jpeg`);
-            if(counter === 5)
-                setCounter(1)
-        }, 2000);
-        return () => clearInterval(interval);
-      }, []);
 
-    return (
-        <div className='carousel-container'>
-            {srcImage && <Image src={srcImage} width={300} height={300}/>}
-        </div>
-    );
+    return (<div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel__face"></div>
+      <div class="carousel__face"></div>
+      <div class="carousel__face"></div>
+      <div class="carousel__face"></div>
+      <div class="carousel__face"></div>
+    </div>
+  </div>);
 }
 
 export default Carousel;

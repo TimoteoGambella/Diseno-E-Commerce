@@ -6,7 +6,7 @@ import Carousel from './Carousel';
 const HomeContainer = () => {
     return (
         <div className='home-container'>
-            {/* <Carousel/> */}
+            <Carousel/>
 
 
             <div className='home-nav'>
