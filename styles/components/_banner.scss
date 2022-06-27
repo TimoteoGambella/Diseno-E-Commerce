@@ -1,27 +1,3 @@
-.banner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    --opacidad-negro: 0.5;
-    // background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../../public/img/Diseño\ sin\ título\ \(1\).png");
-
-    // background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),url("../../public/img/Diseño\ sin\ título\ \(1\).png");
-    width: 100%;
-    height: 40vh;
-    overflow: hidden;
-
-    .container-titulo{
-        h1{
-            font-size: 10vw;
-            color: #38220e;
-            letter-spacing: .1em;
-            text-shadow: 
-              -1px -1px 3px #5a4b3d, 
-              3px 3px 5px #5a4b3d;
-              cursor: pointer;
-        }
-    }
-}
 .ban{
     background-image: url("../../public/img/BENET (2).png");
     background-position:center;

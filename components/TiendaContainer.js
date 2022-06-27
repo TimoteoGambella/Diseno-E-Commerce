@@ -54,8 +54,7 @@ const TiendaContainer = ({itemType, setItemType}) => {
 
             <div className="tienda">
                 {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
-                {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
-
+                
             </div>
         
             {totalProductos>mostrarMas?
