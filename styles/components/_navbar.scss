@@ -6,7 +6,8 @@
   align-items: center;
   flex-direction: column;
   border-top: 1px solid black;
-
+  position: fixed;
+  
   .background-nav{
     z-index: 90;
   }
@@ -33,6 +34,15 @@
         color: white;
       }
     }
+  }
+  .logo{
+    position: absolute;
+    left: 0;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    z-index: 99;
+    width: 10rem;
+    cursor: pointer;
   }
 
   .fondo-sepLeft{

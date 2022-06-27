@@ -45,7 +45,7 @@ const TiendaContainer = ({itemType, setItemType}) => {
                 <div className='tienda-title'>
                     <h1>{itemType.toUpperCase()}</h1>
                 </div>
-                {/* <Dropdown setItemType={setItemType} itemType={itemType}/> */}
+
                 <button onClick={() => setItemType("Todo")}>Todo</button>
                 <button onClick={() => setItemType("Remeras")}>Remeras</button>
                 <button onClick={() => setItemType("Joggins")}>Joggins</button>

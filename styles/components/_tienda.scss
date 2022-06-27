@@ -11,18 +11,18 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: row;
+    padding-top: 15rem;
 
     .tienda-tabs-container{
-        width: 30%;
+        width: 15rem;
         height: 50vh;
-        font-size: 2vw;
-        margin-top: 8vw;
-        padding: 1.2em;
+        font-size: 1.5rem;
+        margin-top: 4vw;
         padding-bottom: 4em;
         display: flex;
         justify-content: center;
         flex-direction: column;
-
+        position: fixed;
         button{
             margin: 0.5em;
             border-color: #d1b797;
@@ -57,6 +57,7 @@
         background-position: center;
         background-size: cover;
         padding-bottom: 5rem;
+        margin-left: 15rem;
         &::-webkit-scrollbar {
             width: 0px;
         }
