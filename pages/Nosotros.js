@@ -1,6 +1,6 @@
 
-import NavbarMenu from '../components/NavbarMenu';
-import NosotrosContainer from '../components/NosotrosContainer';
+import NavbarMenu from './components/NavbarMenu';
+import NosotrosContainer from './components/NosotrosContainer';
 
 export default function Home() {
   return (

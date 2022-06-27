@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import CardProducto from '../components/CardProducto';
 import Image from "next/image";
-import { getProductos } from '../firebase/FirebaseDB';
-import loading from "../public/loading_icon.webp";
-import Dropdown from './Dropdown';
+import { getProductos } from '../../firebase/FirebaseDB';
+import loading from "../../public/loading_icon.webp";
 
 
 const TiendaContainer = ({itemType, setItemType}) => {
