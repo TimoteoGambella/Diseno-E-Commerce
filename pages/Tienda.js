@@ -11,11 +11,13 @@ export default function Tienda() {
 
     <div className="root">
 
-      <Banner/>
 
+      <Banner/>
+      
       <NavbarMenu/>
 
       <TiendaContainer itemType={itemType} setItemType={setItemType}/>
+
 
       
     </div>

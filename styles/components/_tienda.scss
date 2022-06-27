@@ -1,36 +1,48 @@
+.tienda-title{
+    width: 100%;
+    text-align: center;
+    color: #d1b797;
+}
+
 .tienda-container{
     min-height: 80vh;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
-    flex-direction: column;
-    --opacidad-negro: 0.5;
+    flex-direction: row;
+    // background-color: #d1b797;
+    // --opacidad-negro: 0.5;
 
-
-
-    .tienda-title-container{
-        text-align: center;
+    .tienda-tabs-container{
+        width: 30%;
+        height: 100%;
         font-size: 2vw;
-        margin: 2em;
-        color: antiquewhite;
-        width: 20%;
+        margin: 1.2em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
 
         .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select{
-            background-color: #edab5b;
+            background-color: white;
         }
 
-        h1{
-            margin: 0.2em;
+        button{
+            margin: 0.5em;
+            background-color: transparent;
+            border-color: #d1b797;
+            color: #d1b797;
         }
     }
 
     .tienda{
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: flex-start;
         align-items: center;
 
     }
 }
+
+

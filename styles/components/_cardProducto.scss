@@ -1,12 +1,11 @@
 .card-container{
-    width: 50%;
-    background-color: #edab5b;
+    width: 80%;
+    background-color: #d1b797;
     height: 40vh;
     display: flex;
     align-items: center;
     border-radius: 8px;
-    box-shadow: 0.6em 0.6em 1.2em rgb(0 0 0 / 5%);
-    transition: all 0.5s ease;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;    transition: all 0.5s ease;
     margin: 2em;
 
     .card-image{
@@ -32,7 +31,4 @@
         } 
     }
 
-    &:hover{
-        box-shadow: 0.2em 0.2em 0.2em rgba(255, 255, 255, 0.379);
-    }
 }
