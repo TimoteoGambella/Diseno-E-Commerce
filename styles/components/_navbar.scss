@@ -21,15 +21,18 @@
 
       button{
         background-color: transparent;
-        border-color: black;
-        color: black;
+        color: #d1b797;
+        border-color: #d1b797;
+
         margin: 1em;
         padding: 0.5em;
-        transition: all 0.2s ease;
+        transition: all 0.4s ease;
         font-size: 1.6vw;
         &:hover{
           // background-color: rgba(173, 66, 66, 0.782);
           box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+          border-color: white;
+          color: white;
         }
 
       }

@@ -12,6 +12,7 @@ export default function Tienda() {
     <div className="root">
 
 
+
       <Banner/>
       
       <NavbarMenu/>
