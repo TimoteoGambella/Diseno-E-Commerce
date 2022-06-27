@@ -20,9 +20,9 @@ export default function Tienda() {
 
       <Banner/>
       
-      <NavbarMenu/>
+      <NavbarMenu scrollRef={scrollRef}/>
 
-      <TiendaContainer itemType={itemType} setItemType={setItemType} scrollRef={scrollRef}/>
+      <TiendaContainer itemType={itemType} setItemType={setItemType} />
       
     </div>
   )

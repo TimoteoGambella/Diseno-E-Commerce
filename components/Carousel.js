@@ -3,13 +3,13 @@ import React from 'react';
 const Carousel = () => {
 
 
-    return (<div class="carousel-container">
-    <div class="carousel">
-      <div class="carousel__face"></div>
-      <div class="carousel__face"></div>
-      <div class="carousel__face"></div>
-      <div class="carousel__face"></div>
-      <div class="carousel__face"></div>
+    return (<div className="carousel-container">
+    <div className="carousel">
+      <div className="carousel__face"></div>
+      <div className="carousel__face"></div>
+      <div className="carousel__face"></div>
+      <div className="carousel__face"></div>
+      <div className="carousel__face"></div>
     </div>
   </div>);
 }

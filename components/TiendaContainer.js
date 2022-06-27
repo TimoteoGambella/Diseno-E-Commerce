@@ -6,7 +6,7 @@ import loading from "../public/loading_icon.webp";
 import Dropdown from './Dropdown';
 
 
-const TiendaContainer = ({itemType, setItemType,scrollRef}) => {
+const TiendaContainer = ({itemType, setItemType}) => {
 
     const [productos, setProductos] = useState([]);
     const [totalProductos, setTotalProductos] = useState(0);
@@ -70,7 +70,6 @@ const TiendaContainer = ({itemType, setItemType,scrollRef}) => {
             } 
             </>:<></>
             }
-            <div ref={scrollRef}></div>
         </div>
     </>
     )

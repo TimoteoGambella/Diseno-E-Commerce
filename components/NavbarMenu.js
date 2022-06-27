@@ -1,8 +1,8 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { useRouter } from 'next/router';
  
 // NAVBAR DE RANKING COMPONENT
-const NavbarMenu = ({handleRanking}) => {
+const NavbarMenu = ({handleRanking,scrollRef}) => {
     const { push } = useRouter();
 
     return (
@@ -13,7 +13,7 @@ const NavbarMenu = ({handleRanking}) => {
                     <div></div>
                 </div>
 
-                <div className="navbar-nav">
+                <div className="navbar-nav" ref={scrollRef}>
                     <button onClick={() => push("/Nosotros")}>Nosotros</button>
                     <button onClick={() => push("/Tienda")}>Productos</button>
                 </div>
