@@ -17,12 +17,14 @@
     user-select: none;
 }
 
+body{
+    background-color: #b8b8b8 !important;
+}
+
 .root{
     width: 100%;
     height: auto;
     background-color: #b8b8b8;
-
-
 }
 
 *::-webkit-scrollbar {
