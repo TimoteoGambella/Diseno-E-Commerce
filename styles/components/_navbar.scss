@@ -7,7 +7,11 @@
   flex-direction: column;
   border-top: 1px solid black;
 
+  .background-nav{
+    z-index: 10;
+  }
   .navbar-nav{
+    z-index: 20 ;
       width: 100%;
       // background: linear-gradient(55deg,#bfa48b,#6f4218,#6f4218,#bfa48b);
       display: flex;

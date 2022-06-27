@@ -39,11 +39,12 @@ const TiendaContainer = ({itemType, setItemType}) => {
       }
 
     return (<>
-        <div className='tienda-title'>
-            <h1>{itemType.toUpperCase()}</h1>
-        </div>
+
         <div className="tienda-container">
             <div className="tienda-tabs-container">
+                <div className='tienda-title'>
+                    <h1>{itemType.toUpperCase()}</h1>
+                </div>
                 {/* <Dropdown setItemType={setItemType} itemType={itemType}/> */}
                 <button onClick={() => setItemType("Todo")}>Todo</button>
                 <button onClick={() => setItemType("Remeras")}>Remeras</button>
@@ -53,6 +54,8 @@ const TiendaContainer = ({itemType, setItemType}) => {
 
             <div className="tienda">
                 {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
+                {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
+
             </div>
         
             {totalProductos>mostrarMas?

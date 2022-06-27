@@ -5,12 +5,13 @@
 }
 
 .tienda-container{
-    min-height: 100\vh;
+    max-height: 60vh;
     width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: row;
+
     // background-color: #d1b797;
     // --opacidad-negro: 0.5;
 
@@ -18,11 +19,13 @@
         width: 30%;
         height: 100%;
         font-size: 2vw;
-        margin: 1.2em;
+        padding: 1.2em;
+        padding-bottom: 4em;
         display: flex;
         justify-content: center;
         flex-direction: column;
-
+        margin-top: -400px;
+        padding-top: 400px;
 
         .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select{
             background-color: white;
@@ -45,14 +48,21 @@
     }
 
     .tienda{
+        overflow-y: scroll;
         width: 100%;
-        min-height: 100vh;
+        max-height: 133vh;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        border-left: 1px solid white;
-
+        border-left: 1px solid black;
+        margin-top: -500px;
+        padding-top: 500px;
+        --opacidad-negro: 0.5;
+        background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../../public/img/local4.jpeg");
+        background-repeat:repeat;
+        background-position: center;
+        background-size: cover;
     }
 }
 

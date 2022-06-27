@@ -19,11 +19,9 @@
 .root{
     width: 100%;
     height: auto;
-    --opacidad-negro: 0.5;
-    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../public/img/local3.jpeg");
-    background-size: cover;
-    // background-color: #131313;
-    // background: #403C3C;
+    background-color: grey;
+
+
 }
 
 *::-webkit-scrollbar {
