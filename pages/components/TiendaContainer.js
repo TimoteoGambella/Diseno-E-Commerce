@@ -3,14 +3,17 @@ import CardProducto from '../components/CardProducto';
 import Image from "next/image";
 import { getProductos } from '../../firebase/FirebaseDB';
 import loading from "../../public/loading_icon.webp";
+import { useRouter } from 'next/router';
 
 
 const TiendaContainer = ({itemType, setItemType}) => {
+    const { push } = useRouter();
 
     const [productos, setProductos] = useState([]);
     const [totalProductos, setTotalProductos] = useState(0);
     const [cargando,setCargando]=useState(false)
     const [mostrarMas,setMostrarMas]=useState(10)
+    const [display,setDisplay]=useState(false)
 
     useEffect(() => {
         setItemType(itemType)
@@ -45,13 +48,15 @@ const TiendaContainer = ({itemType, setItemType}) => {
                     <h1>{itemType.toUpperCase()}</h1>
                 </div>
 
-                <button onClick={() => setItemType("Todo")}>Todo</button>
-                <button onClick={() => setItemType("Remeras")}>Remeras</button>
-                <button onClick={() => setItemType("Joggins")}>Joggins</button>
-                <button onClick={() => setItemType("Camperas")}>Camperas</button>
+                <button onClick={() => {setItemType("Todo"),setDisplay(true),push("#card-REF")}}>Todo</button>
+                <button onClick={() => {setItemType("Remeras"),setDisplay(true),push("#card-REF")}}>Remeras</button>
+                <button onClick={() => {setItemType("Joggins"),setDisplay(true),push("#card-REF")}}>Joggins</button>
+                <button onClick={() => {setItemType("Camperas")}}>Camperas</button>
             </div>
 
             <div className="tienda">
+                {display && <div id='card-REF' style={{height:"2500",width:"300px",paddingTop:"10vw"}}></div>}
+                
                 {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
                 {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
             </div>
