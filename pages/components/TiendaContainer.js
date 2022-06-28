@@ -38,7 +38,16 @@ const TiendaContainer = ({itemType, setItemType}) => {
             setCargando(false)
           },1000)
         }).catch(err => console.log(err))
-      }
+    }
+
+    const handleButton =(tipo)=>{
+        setItemType(tipo)
+        setDisplay(true)
+        push("#card-REF")
+        setTimeout(() => {
+            setDisplay(false)
+        }, 200);
+    }
 
     return (<>
 
@@ -48,15 +57,17 @@ const TiendaContainer = ({itemType, setItemType}) => {
                     <h1>{itemType.toUpperCase()}</h1>
                 </div>
 
-                <button onClick={() => {setItemType("Todo"),setDisplay(true),push("#card-REF")}}>Todo</button>
-                <button onClick={() => {setItemType("Remeras"),setDisplay(true),push("#card-REF")}}>Remeras</button>
-                <button onClick={() => {setItemType("Joggins"),setDisplay(true),push("#card-REF")}}>Joggins</button>
-                <button onClick={() => {setItemType("Camperas")}}>Camperas</button>
+                <button onClick={() => {handleButton("Todo")}}>Todo</button>
+                <button onClick={() => {handleButton("Remeras")}}>Remeras</button>
+                <button onClick={() => {handleButton("Joggins")}}>Joggins</button>
+                <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
             </div>
 
             <div className="tienda">
                 {display && <div id='card-REF' style={{height:"2500",width:"300px",paddingTop:"10vw"}}></div>}
                 
+                {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
+                {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
                 {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
                 {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
             </div>

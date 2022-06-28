@@ -26,6 +26,22 @@ body{
     background-color: #b8b8b8;
 }
 
+.cargarMas{
+    text-align: center;
+    color: #084444;
+    cursor: pointer;
+    margin-top: 2vw;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.loading{
+    margin-bottom: 2vw;
+    img{
+        background-color: transparent;
+    }
+}
+
 *::-webkit-scrollbar {
     width: 6px;
     margin:10px;
