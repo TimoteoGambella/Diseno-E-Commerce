@@ -12,7 +12,7 @@
     justify-content: flex-start;
     flex-direction: row;
     padding-top: 15rem;
-
+    
     .tienda-tabs-container{
         width: 15rem;
         height: 50vh;
@@ -28,7 +28,6 @@
             border-color: #d1b797;
             color: #d1b797;
             transition: all 0.4s ease;
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;    transition: all 0.5s ease;
             background-color: black;
            
             &:hover{
@@ -60,6 +59,17 @@
         margin-left: 15rem;
         &::-webkit-scrollbar {
             width: 0px;
+        }
+    }
+    .filtros-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        overflow-y: scroll;
+        min-height: 20rem;
+        max-height: 20rem;
+        &::-webkit-scrollbar {
+            width: 3px;
         }
     }
 }

@@ -57,10 +57,16 @@ const TiendaContainer = ({itemType, setItemType}) => {
                     <h1>{itemType.toUpperCase()}</h1>
                 </div>
 
-                <button onClick={() => {handleButton("Todo")}}>Todo</button>
-                <button onClick={() => {handleButton("Remeras")}}>Remeras</button>
-                <button onClick={() => {handleButton("Joggins")}}>Joggins</button>
-                <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
+                <div className='filtros-container'>
+                    <button onClick={() => {handleButton("Todo")}}>Todo</button>
+                    <button onClick={() => {handleButton("Remeras")}}>Remeras</button>
+                    <button onClick={() => {handleButton("Joggins")}}>Joggins</button>
+                    <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
+                    <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
+                    <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
+                    <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
+                </div>
+                
             </div>
 
             <div className="tienda">
@@ -70,21 +76,22 @@ const TiendaContainer = ({itemType, setItemType}) => {
                 {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
                 {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
                 {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
+                
+                {totalProductos<mostrarMas?
+                    <>
+                        {cargando?
+                            <div className="cargarMas loading">
+                                <Image src={loading} alt="loading" width={50} height={50}/>
+                            </div>
+                            :
+                            <div className="cargarMas">
+                                <p onClick={()=>{cargarMasProductos()}}>CARGAR MÁS</p>
+                            </div> 
+                        } 
+                    </>:<></>
+                }
             </div>
         
-            {totalProductos>mostrarMas?
-            <>
-            {cargando?
-                <div className="cargarMas loading">
-                    <Image src={loading} alt="loading" width={50} height={50}/>
-                </div>
-                :
-                <div className="cargarMas">
-                    <p onClick={()=>{cargarMasProductos()}}>CARGAR MÁS</p>
-                </div> 
-            } 
-            </>:<></>
-            }
         </div>
     </>
     )
