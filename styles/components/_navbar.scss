@@ -7,42 +7,19 @@
   flex-direction: column;
   border-top: 1px solid black;
   position: fixed;
-  
-  .background-nav{
-    z-index: 90;
-  }
-  .navbar-nav{
-    z-index: 91;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    position: absolute;
-    margin-top: -1vw;
-    button{
-      background-color: transparent;
-      color: #d1b797;
-      border-color: #d1b797;
-      margin: 1em;
-      padding: 0.5em;
-      transition: all 0.4s ease;
-      font-size: 1.6vw;
-      &:hover{
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-        border-color: white;
-        color: white;
-      }
-    }
-  }
+
   .logo-benet{
     position: absolute;
     left: 0;
     margin-left: 2rem;
     margin-top: 2rem;
     z-index: 99;
-    width: 10rem;
+    width: 12vw;
     cursor: pointer;
+    @include screen_985{
+      width: 15vw;
+      margin-top: 2vw;
+    }
   }
 
   .logo-velvet{
@@ -54,14 +31,14 @@
     cursor: pointer;
     a{
       text-decoration: none;
-            font-size: 6vw;
-            color: grey;
-            animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
-            animation-duration: 1s;
-            transition: all 0.5s ease;
-            &:hover{
-                color: #e99b53;
-            }
+      font-size: 6vw;
+      color: grey;
+      animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
+      animation-duration: 1s;
+      transition: all 0.5s ease;
+      &:hover{
+          color: #e99b53;
+      }
     }
   }
 
@@ -73,7 +50,9 @@
     background-color: black;
     margin-top: -4vw;
     border-bottom: 5px solid #a0a0a0;
-
+    @include screen_985{
+      height: 12vw;
+    }
   }
   .sepLeft{
     width: 100%;
@@ -83,6 +62,9 @@
     margin-top: 5vw;
     z-index: 91;
     border-bottom: 5px solid #a0a0a0;
+    @include screen_985{
+      height: 10vw;
+    }
   }
   .sepLeft2{
     width: 100%;
@@ -92,5 +74,8 @@
     z-index: 91;
     position: fixed;
     top: 0;
+    @include screen_985{
+      height: 13vw;
+    }
   }
 }

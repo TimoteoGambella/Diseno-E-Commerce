@@ -11,7 +11,10 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: row;
-    padding-top: 15rem;
+    padding-top: 16vw;
+    @include screen_985{
+        padding-top: 20vw;
+    }
     
     .tienda-tabs-container{
         width: 15rem;
@@ -21,12 +24,19 @@
         justify-content: center;
         flex-direction: column;
         position: fixed;
+        @include screen_900{
+            width: 11rem;
+        }
+
         button{
-            margin: 0.5em;
+            margin: 0.8vw;
             border-color: #d1b797;
             color: #d1b797;
             transition: all 0.4s ease;
             background-color: black;
+            @include screen_985{
+                margin: 1vw;
+            }
            
             &:hover{
                 box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
@@ -35,7 +45,7 @@
               }
         }
     }
-
+    
     .tienda{
         overflow-y: scroll;
         overflow-x: hidden;
@@ -59,15 +69,18 @@
         &::-webkit-scrollbar {
             width: 0px;
         }
+        @include screen_900{
+            margin-left: 11rem;
+        }
     }
+
     .filtros-container{
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
         overflow-y: scroll;
-        min-height: 20rem;
-        max-height: 20rem;
-        padding-bottom: 2rem;
+        min-height: 18rem;
+        max-height: 18rem;
         &::-webkit-scrollbar {
             width: 3px;
         }
