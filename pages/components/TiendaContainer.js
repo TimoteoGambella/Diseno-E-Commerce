@@ -64,9 +64,7 @@ const TiendaContainer = ({itemType, setItemType}) => {
                     <button onClick={() => {handleButton("Remeras")}}>Remeras</button>
                     <button onClick={() => {handleButton("Joggins")}}>Joggins</button>
                     <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
-                    <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
-                    <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
-                    <button onClick={() => {handleButton("Camperas")}}>Ultimos</button>
+
                 </div>
                 
             </div>

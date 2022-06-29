@@ -45,7 +45,9 @@
        transform: rotateY(360deg) translateZ(230px); }
 
 
-      
+      @include mobile{
+        display: none;
+      }
 
 }
 

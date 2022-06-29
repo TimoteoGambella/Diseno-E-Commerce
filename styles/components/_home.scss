@@ -17,6 +17,14 @@
         margin: 0 5em 5em 0;
         padding-right: 4em;
         padding-bottom: 3em;
+
+        @include mobile {
+            justify-content: center;
+            align-items: center;
+            padding-right: 0;
+        }
+
+
         a{
             text-decoration: none;
             font-size: 6vw;
@@ -27,6 +35,15 @@
             &:hover{
                 color: white;
             }
+
+
+            @include tablet{
+                font-size: 8vw;
+            }
+            @include mobile{
+                font-size: 12vw;
+            }
+
         }
     }
 
@@ -41,6 +58,29 @@
         span{
             --opacidad-negro: 0.5;
             background: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro)));
+        }
+    }
+
+
+    .logo-home{
+        display: none;
+        
+        @include mobile{
+            margin-bottom: 4em;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+            div{
+                position: absolute;
+                background-color: white;
+                width: 32%;
+                height: 20%;
+            }
+
+            img{
+                z-index: 50;
+            }
         }
     }
 }

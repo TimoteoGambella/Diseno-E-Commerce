@@ -1,5 +1,6 @@
 import React from 'react';
-
+import logo from "../../public/img/logoblack.png"
+import Image from 'next/image';
 import Link from 'next/link'
 import Carousel from './Carousel';
 
@@ -9,7 +10,12 @@ const HomeContainer = () => {
             <Carousel/>
 
 
+
             <div className='home-nav'>
+                <div className='logo-home'>
+                    <Image src={logo} width={300} height={300} alt="Banner" onClick={()=>push("/")}/>
+                    <div></div>
+                </div>
                 <Link href="/Tienda">PRODUCTOS</Link>
             </div>
         </div>
