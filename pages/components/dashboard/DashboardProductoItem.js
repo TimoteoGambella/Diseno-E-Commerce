@@ -3,13 +3,12 @@ import { addStorage,removeProduct } from '../../../firebase/FirebaseDB';
 import Image from "next/image";
 import loading from "../../../public/loading_icon.webp"
 import DashboardProductoInput from './DashboardProductoInput';
+import Swal from 'sweetalert2'
 
 
 
 export default function DashboardProductoItem ({producto,setReload, reload}) {
-    const [disp,setDisp]=useState("none");
     const [cargando,setCargando] = useState(true);
-
 
 
     const changeImagen = (e)=>{
@@ -26,10 +25,26 @@ export default function DashboardProductoItem ({producto,setReload, reload}) {
 
 
     const handleRemoveProduct = () => {
+        Swal.fire({
+            title: 'ESTAS SEGURO?',
+            showCancelButton: true,
+            confirmButtonText: 'ELIMINAR',
+            color: '#e99b53',
+            confirmButtonColor: '#e99b53',
+            confirmTextrColor: "black",
+          }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                removeProduct(producto.id).then(res => {
+                    setReload(!reload);
+                })
+              Swal.fire('Eliminado!', '', 'success', {confirmButtonColor: "e99b53"})
+            }
+          })
+
+
         setCargando(true)
-        removeProduct(producto.id).then(res => {
-            setReload(!reload);
-        })
+        
     }
 
     return (
@@ -40,8 +55,8 @@ export default function DashboardProductoItem ({producto,setReload, reload}) {
                     <div className='img-dash-prod-item dash-prod-item-box'>
                         {
                             cargando?
-                                <div style={{backgroundColor:"#dee6e6",width:"100%"}}>
-                                  <Image src={loading} alt="loading" width={50} height={50} style={{backgroundColor:"transparent"}}/>
+                                <div>
+                                  <Image src={loading} alt="loading" width={50} height={50}/>
                                 </div>
                             :
                             <>
@@ -67,26 +82,20 @@ export default function DashboardProductoItem ({producto,setReload, reload}) {
                     </div>
 
                     <div className='dash-prod-item-box'>
-                    <DashboardProductoInput tipo={"categoria"} title={"Categoria"} producto={producto} />
-                    <DashboardProductoInput tipo={"precio"} title={"Precio"} producto={producto} />
-                    <DashboardProductoInput tipo={"stock"} title={"Stock"} producto={producto} />
+                        
+                        <DashboardProductoInput tipo={"categoria"} title={"Categoria"} producto={producto} />
+                        <DashboardProductoInput tipo={"precio"} title={"Precio"} producto={producto} />
+                        <DashboardProductoInput tipo={"stock"} title={"Stock"} producto={producto} />
 
                     </div>
                     
                     <div className='dash-prod-item-box delete-item-box'>
-                        <button onClick={()=> setDisp("block")}>ELIMINAR PRODUCTO</button>
+                        <button onClick={handleRemoveProduct}>ELIMINAR PRODUCTO</button>
                     </div>
                 </div>
             </div>
             
             }
-
-            <div className='fondo-block' style={{display:disp, zIndex:'5'}}>
-                <div className='confirm-cancel-info'>
-                    <p className='button-borrar-order' onClick={()=>{handleRemoveProduct(),setDisp("none")}}>Confirmar</p>
-                    <p className='button-borrar-order' onClick={()=>{setDisp("none")}}>Cancelar</p>
-                </div>
-            </div>
 
         </>
         

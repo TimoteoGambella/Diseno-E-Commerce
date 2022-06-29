@@ -34,7 +34,8 @@ export default function DashboardProductos () {
 
             <div className="dashboard-productos-container">
                 {busqueda? <p className="noSeEncontro">No se encontraron productos</p> 
-                :   prodsFiltrados.length === 0 ? listaProds.map(prod => <DashboardProductoItem key={prod.id} producto={prod} setReload={setReload} reload={reload}/>)
+                :   
+                prodsFiltrados.length === 0 ? listaProds.map(prod => <DashboardProductoItem key={prod.id} producto={prod} setReload={setReload} reload={reload}/>)
                 :
                 prodsFiltrados.map(prod => <DashboardProductoItem key={prod.id} producto={prod} setReload={setReload} reload={reload}/>)
                 }
