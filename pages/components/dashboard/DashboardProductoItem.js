@@ -40,8 +40,8 @@ export default function DashboardProductoItem ({producto,setReload, reload}) {
                     <div className='img-dash-prod-item dash-prod-item-box'>
                         {
                             cargando?
-                                <div style={{backgroundColor:"#dee6e6",width:"100%"}}>
-                                  <Image src={loading} alt="loading" width={50} height={50} style={{backgroundColor:"transparent"}}/>
+                                <div>
+                                  <Image src={loading} alt="loading" width={50} height={50}/>
                                 </div>
                             :
                             <>
@@ -67,9 +67,10 @@ export default function DashboardProductoItem ({producto,setReload, reload}) {
                     </div>
 
                     <div className='dash-prod-item-box'>
-                    <DashboardProductoInput tipo={"categoria"} title={"Categoria"} producto={producto} />
-                    <DashboardProductoInput tipo={"precio"} title={"Precio"} producto={producto} />
-                    <DashboardProductoInput tipo={"stock"} title={"Stock"} producto={producto} />
+                        
+                        <DashboardProductoInput tipo={"categoria"} title={"Categoria"} producto={producto} />
+                        <DashboardProductoInput tipo={"precio"} title={"Precio"} producto={producto} />
+                        <DashboardProductoInput tipo={"stock"} title={"Stock"} producto={producto} />
 
                     </div>
                     

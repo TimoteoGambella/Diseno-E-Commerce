@@ -11,9 +11,9 @@ export default function DashboardContainer () {
                 <h3>DASHBOARD</h3>
             </div>
 
-            <div className="dashboard-type">
-                <DashboardProductos/>
-            </div>
+
+            <DashboardProductos/>
+
         </div>
             
     )

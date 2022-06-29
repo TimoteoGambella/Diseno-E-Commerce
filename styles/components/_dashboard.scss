@@ -1,10 +1,15 @@
 .dashboard-container{
     width: 100%;
-    height: auto;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;   
     flex-direction: column;
+    --opacidad-negro: 0.5;
+    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../../public/img/local3.jpeg");
+    background-size: cover;
+    backdrop-filter: blur(2px);
+
 
     .dashboard-title{
         display: flex;
@@ -15,25 +20,12 @@
 
         h2, h3{
             font-family: "Montserrat", sans-serif;
-            font-weight: 300;
+            font-weight: 500;
             font-size: 4vw;
-            color: #084444;
+            color: #e99b53;
             text-decoration: none;
             background-color: transparent;
         }
     }
 
-    .button-entregada{
-        padding-left: 1vw;
-        padding-right: 1vw;
-    }
-
-    .dashboard-type{
-        width: 90%;
-        height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        margin-top: 5vh;
-    }
 }

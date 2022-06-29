@@ -2,29 +2,43 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: auto;
+    width: 90%;
     flex-direction: column;
-
+    
+    h2{
+        color: #e99b53;
+    }
     .dash-buscador{
         width: 30%;
         input{
+            color: black;
             width: 100%;
             padding: 0.5em;
             border-radius: 1em;
-            background-color: #0b5a5a4a;
+            background-color: #ababab;
+
+            &:focus{
+                outline: none !important;
+            }
         }
     }
 
     button{
-        background-color: #0b5a5a;
-        color: white;
-        padding: 0.9em;
+        margin: 1em;
+        padding: 0.5em;
+        border-radius: 2em;
+        font-size: 1.6em;
         cursor: pointer;
-        border-radius: 0.4em;
-        margin: 1.5em;
+        color: black;
+        background-color: #e99b53;
+        font-weight: 600;
+        border: 1px solid transparent;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        &:hover{
+          background-color: #cc9a6c;
+          border: 1px solid #e99b53;
+        }
     }
-
 
     .dashboard-productos-container{
         width: 100%;
@@ -33,89 +47,6 @@
         align-items: center;
         flex-direction: column;
 
-        .dash-prod-item-container{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            max-height: 320px;
-            
-            .dash-prod-item{
-                border: 1px solid black;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: row;
-                margin: 1em;
-                height: auto;
-
-                .img-dash-prod-item{
-                    width: 50% !important;
-                    max-width: 50% !important;
-                    min-height: 50% !important;
-                }
-
-
-                .dash-prod-item-box{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    width: 100%;
-                    height: 100%;
-
-                    div{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        margin: 0.8em;
-                        transition: all 1s ease;
-
-                        .form-input, h5{
-                            margin-left: 0.5em;
-
-                        }
-                    }
-
-                    input{
-                        background-color: #0b5a5a7e;
-                        color: black;
-                        border-radius: 0.4em;
-                        margin: 0.5em;
-                        padding: 0.5em;
-                        border: none;
-                    }
-                }
-
-                .delete-item-box{
-                    width: 50% !important;
-                    button{
-                        &:hover{
-                            background-color: #dee6e6;
-                            color: hsl(180, 79%, 15%);
-                            border: 2px solid hsl(180, 79%, 15%);
-                        }
-                    }
-                }
-
-
-                svg{
-                    cursor: pointer;
-                    margin-left: 0.5em;
-                    opacity: 0.5;
-                    color: #0b5a5a;
-                    font-size: 3vh;
-
-                    &:hover{
-                        opacity: 1;
-                    }
-                }
-
-
-            }
-        }
         .noSeEncontro{
             margin-top: 2vw;
             font-size: 2vw;
