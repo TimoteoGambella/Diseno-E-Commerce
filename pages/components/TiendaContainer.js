@@ -13,7 +13,7 @@ const TiendaContainer = ({itemType, setItemType}) => {
     const [totalProductos, setTotalProductos] = useState(0);
     const [cargando,setCargando]=useState(false)
     const [mostrarMas,setMostrarMas]=useState(4);
-    // const [display,setDisplay]=useState(true)
+    const [display,setDisplay]=useState(true)
 
     useEffect(() => {
 
@@ -26,8 +26,6 @@ const TiendaContainer = ({itemType, setItemType}) => {
         }).catch(err => console.log(err))
 
         setMostrarMas(4);
-
-
 
     }, [itemType]);// eslint-disable-line react-hooks/exhaustive-deps
 
@@ -47,7 +45,7 @@ const TiendaContainer = ({itemType, setItemType}) => {
     }
 
     const handleButton =(tipo)=>{
-        // push("#card-REF")
+        push("#card-REF")
         setItemType(tipo)
     }
 
@@ -64,13 +62,12 @@ const TiendaContainer = ({itemType, setItemType}) => {
                     <button onClick={() => {handleButton("Remeras")}}>Remeras</button>
                     <button onClick={() => {handleButton("Joggins")}}>Joggins</button>
                     <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
-
                 </div>
                 
             </div>
 
             <div className="tienda">
-                {/* {display && <div id='card-REF' style={{height:"2500",width:"300px",paddingTop:"10vw"}}></div>} */}
+                {display && <div id='card-REF' style={{height:"2500",width:"300px",paddingTop:"10vw"}}></div>}
                 
                 {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
               
