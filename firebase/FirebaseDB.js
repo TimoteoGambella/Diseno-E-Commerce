@@ -35,22 +35,19 @@ export const getProductos = async(type,limite) =>{
 export const editPropProduct = async (id,type,data) => {
   const product = doc(db, "Productos", id);
   if(type === "nombre"){
-    await setDoc(product,{Nombre:data}, {merge:true})
+    await setDoc(product,{nombre:data}, {merge:true})
   }
   if(type === "descripcion"){
-    await setDoc(product,{Descripcion:data}, {merge:true})
+    await setDoc(product,{descripcion:data}, {merge:true})
   }
-  if(type === "categoria"){
-    await setDoc(product,{Categoria:data}, {merge:true})
+  if(type === "corte"){
+    await setDoc(product,{corte:data}, {merge:true})
   }
   if(type === "precio"){
-    await setDoc(product,{Precio:data}, {merge:true})
+    await setDoc(product,{precio:data}, {merge:true})
   }
-  if(type === "stock"){
-    await setDoc(product,{Stock:data}, {merge:true})
-  }  
-  if(type === "imagen"){
-    await setDoc(product,{Img:data}, {merge:true})
+  if(type === "img"){
+    await setDoc(product,{img:data}, {merge:true})
   }
 }
 

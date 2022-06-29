@@ -35,9 +35,9 @@ export default function DashboardProductoItem ({producto,setReload, reload}) {
           }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
-                removeProduct(producto.id).then(res => {
-                    setReload(!reload);
-                })
+                // removeProduct(producto.id).then(res => {
+                //     setReload(!reload);
+                // })
               Swal.fire('Eliminado!', '', 'success', {confirmButtonColor: "e99b53"})
             }
           })
@@ -60,7 +60,7 @@ export default function DashboardProductoItem ({producto,setReload, reload}) {
                                 </div>
                             :
                             <>
-                                <Image src={producto.Img} alt={"imagen-del-producto"} width={200} height={200}/>
+                                <Image src={producto.img} alt={"imagen-del-producto"} width={200} height={200}/>
                                 <p>(245x320)</p>
                                 <input
                                     type="file"
@@ -76,16 +76,16 @@ export default function DashboardProductoItem ({producto,setReload, reload}) {
 
                     <div className='dash-prod-item-box'>
                         
-                        <DashboardProductoInput tipo={"nombre"} title={"Nombre"} producto={producto} />
-                        <DashboardProductoInput tipo={"descripcion"} title={"Descripcion"} producto={producto} />
+                        <DashboardProductoInput setReload={setReload} reload={reload} productId={producto.id} type={"nombre"} title={"Nombre"} palceholderValue={producto.nombre} />
+                        <DashboardProductoInput setReload={setReload} reload={reload} productId={producto.id} type={"descripcion"} title={"Descripcion"} palceholderValue={producto.descripcion} />
 
                     </div>
 
                     <div className='dash-prod-item-box'>
                         
-                        <DashboardProductoInput tipo={"categoria"} title={"Categoria"} producto={producto} />
-                        <DashboardProductoInput tipo={"precio"} title={"Precio"} producto={producto} />
-                        <DashboardProductoInput tipo={"stock"} title={"Stock"} producto={producto} />
+                        <DashboardProductoInput setReload={setReload} reload={reload} productId={producto.id} type={"categoria"} title={"Precio"} palceholderValue={producto.precio} />
+                        <DashboardProductoInput setReload={setReload} reload={reload} productId={producto.id} type={"corte"} title={"Corte"} palceholderValue={producto.corte} />
+                        <DashboardProductoInput setReload={setReload} reload={reload} productId={producto.id} type={"precio"} title={"Tipo"} palceholderValue={producto.tipo} />
 
                     </div>
                     

@@ -5,33 +5,39 @@ import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutli
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import { editPropProduct } from '../../../firebase/FirebaseDB';
 
-export default function DashboardProductoInput ({title,tipo,producto}){
+export default function DashboardProductoInput ({setReload, reload,title,type,palceholderValue,productId}){
     const [propType, setPropType] = useState("");
     const [tagDisplay,settagDisplay] = useState(true);
     const [data,setData] = useState("");
 
-    console.log(producto.Stock)
 
     const handleChangeData = (e) => {
         setData(e.target.value)
     }
 
     const handleConfirm = () => {
-        editPropProduct(producto.id,propType,data).then(res => {
+        editPropProduct(productId,propType,data).then(res => {
             setPropType("");
             setReload(!reload);
         });
+        settagDisplay(true)
     }
-
 
 
     return(<div>
 
             {tagDisplay && <h5>{title}: </h5>}
-            {propType === tipo ? <TextField className="title-dash-prod-item" size="medium" autoComplete="off" color="secondary"  id="nameId"  placeholder={producto[title]} type="text" onChangeCapture={handleChangeData}/>
-            : <h5>{producto[title]}</h5>}
+
+            {propType === type ?
+            
+            <TextField className="title-dash-prod-item" size="medium" autoComplete="off" color="secondary"  id="nameId"  placeholder={palceholderValue} type="text" onChangeCapture={handleChangeData}/>
+            
+            : <h5>{palceholderValue}</h5>}
                             
-            {propType !== tipo ? <EditTwoToneIcon fontSize="large" onClick={() => {setPropType(tipo), settagDisplay(false)}}/>
+            {propType !== type ? 
+            
+            <EditTwoToneIcon fontSize="large" onClick={() => {setPropType(type), settagDisplay(false)}}/>
+            
             : <div>
                 <CheckCircleOutlineOutlinedIcon onClick={handleConfirm}/>
                 <CancelOutlinedIcon onClick={()=> {setPropType(""), setData(""), settagDisplay(true)}}/>
