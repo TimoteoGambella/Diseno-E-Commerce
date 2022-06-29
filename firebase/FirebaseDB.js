@@ -66,3 +66,13 @@ export const addProduct = async (producto,img) => {
   await addDoc(collection(db, "Productos"),newProd);
   return (true)
 }
+
+// DASHBOARD REF IMAGE
+const storage=getStorage(app)
+
+export const addStorage = async(titulo,carpeta,imagen)=>{
+  
+  const storageRef = ref(storage,`${carpeta}/${titulo}.webp`)
+  await uploadBytes(storageRef,imagen);
+  return(getDownloadURL(ref(storage,`${carpeta}/${titulo}.webp`)));
+}
