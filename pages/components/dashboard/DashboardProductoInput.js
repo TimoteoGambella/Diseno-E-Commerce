@@ -6,7 +6,7 @@ import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import { editPropProduct } from '../../../firebase/FirebaseDB';
 import Swal from 'sweetalert2'
 
-export default function DashboardProductoInput ({setReload, reload,title,propType,palceholderValue,productId}){
+export default function DashboardProductoInput ({setReload, reload,title,propType,placeholderValue,productId}){
     const [inputProp, setInputProp] = useState("");
     const [tagDisplay,settagDisplay] = useState(true);
     const [data,setData] = useState("");
@@ -32,9 +32,9 @@ export default function DashboardProductoInput ({setReload, reload,title,propTyp
 
             {inputProp === propType ?
             
-            <TextField className="title-dash-prod-item" size="medium" autoComplete="off" color="secondary"  id="nameId"  placeholder={palceholderValue} type="text" onChangeCapture={handleChangeData}/>
+            <TextField className="title-dash-prod-item" size="medium" autoComplete="off" color="secondary"  id="nameId"  placeholder={placeholderValue} type="text" onChangeCapture={handleChangeData}/>
             
-            : <h5>{palceholderValue}</h5>}
+            : <h5>{placeholderValue}</h5>}
                             
             {inputProp !== propType ? 
             

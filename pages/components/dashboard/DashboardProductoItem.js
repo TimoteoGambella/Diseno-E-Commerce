@@ -76,17 +76,17 @@ export default function DashboardProductoItem ({producto,setReload, reload}) {
 
                     <div className='dash-prod-item-box'>
                         
-                        <DashboardProductoInput setReload={setReload} reload={reload} productId={producto.id} propType={"nombre"} title={"Nombre: "} palceholderValue={producto.nombre} />
-                        <DashboardProductoInput setReload={setReload} reload={reload} productId={producto.id} propType={"descripcion"} title={"Descripcion: "} palceholderValue={producto.descripcion} />
+                        <DashboardProductoInput setReload={setReload} reload={reload} productId={producto.id} propType={"nombre"} title={"Nombre: "} placeholderValue={producto.nombre} />
+                        <DashboardProductoInput setReload={setReload} reload={reload} productId={producto.id} propType={"descripcion"} title={"Descripcion: "} placeholderValue={producto.descripcion} />
 
                     </div>
 
                     <div className='dash-prod-item-box'>
                         
-                        <DashboardProductoInput setReload={setReload} reload={reload} productId={producto.id} propType={"precio"} title={"Precio: $"} palceholderValue={producto.precio} />
-                        <DashboardProductoInput setReload={setReload} reload={reload} productId={producto.id} propType={"corte"} title={"Corte: "} palceholderValue={producto.corte} />
+                        <DashboardProductoInput setReload={setReload} reload={reload} productId={producto.id} propType={"precio"} title={"Precio: $"} placeholderValue={producto.precio} />
+                        <DashboardProductoInput setReload={setReload} reload={reload} productId={producto.id} propType={"corte"} title={"Corte: "} placeholderValue={producto.corte} />
                         
-                        <DashboardSelect setReload={setReload} reload={reload} productId={producto.id} propType={"tipoPrenda"} palceholderValue={producto.tipoPrenda}/>
+                        <DashboardSelect setReload={setReload} reload={reload} productId={producto.id} propType={"tipoPrenda"} placeholderValue={producto.tipoPrenda}/>
                         {/* <DashboardProductoInput setReload={setReload} reload={reload} productId={producto.id} type={"precio"} title={"Tipo"}  /> */}
 
                     </div>

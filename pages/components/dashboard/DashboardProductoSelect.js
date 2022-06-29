@@ -5,20 +5,21 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { editPropProduct } from '../../../firebase/FirebaseDB';
 
-const DashboardSelect = ({reload, setReload, propType, productId, palceholderValue}) => {
-    const [prenda, setPrenda] = useState(undefined);
+const DashboardSelect = ({reload, setReload, propType, productId, placeholderValue}) => {
+    const [prenda, setPrenda] = useState("");
 
     const handleChange = (e) => {
         setPrenda(e.target.value)
-        editPropProduct(productId,propType,prenda).then(res => {
-            console.log(productId, propType,prenda)
-            setReload(!reload);
-        });
+        console.log(prenda)
+        // editPropProduct(productId,propType,prenda).then(res => {
+        //     console.log(productId, propType,prenda)
+        //     setReload(!reload);
+        // });
     }
 
 
     useEffect(() => {
-        setPrenda(palceholderValue)
+        setPrenda(placeholderValue)
     }, []);
 
     return (
@@ -31,7 +32,7 @@ const DashboardSelect = ({reload, setReload, propType, productId, palceholderVal
                 value={prenda}
                 label="Prenda"
                 onChange={handleChange}
-                placeholder={palceholderValue}
+                placeholder={placeholderValue}
             >
                 <MenuItem value={"Remeras"}>Remera</MenuItem>
                 <MenuItem value={"Jeans"}>Jean</MenuItem>
