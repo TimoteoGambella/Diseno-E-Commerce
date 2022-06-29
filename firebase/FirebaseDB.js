@@ -18,11 +18,11 @@ const db = getFirestore(app);
 
 
 //OBTENER PRODUCTOS
-export const getProductos = async(cat,limite) =>{
-  if(cat==="Todo"){
+export const getProductos = async(type,limite) =>{
+  if(type==="Todo"){
     var productosDocs = await getDocs(query(collection(db,"Productos"),limit(limite)));
   }else{
-    var productosDocs = await getDocs(query(collection(db,"Productos"),where("tipo","==",cat),limit(limite)));
+    var productosDocs = await getDocs(query(collection(db,"Productos"),where("tipo","==",type),limit(limite)));
   }
   
   const productos = productosDocs.docs.map(doc=>{return{id:doc.id,...doc.data()}})

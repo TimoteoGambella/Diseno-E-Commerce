@@ -12,31 +12,37 @@ const TiendaContainer = ({itemType, setItemType}) => {
     const [productos, setProductos] = useState([]);
     const [totalProductos, setTotalProductos] = useState(0);
     const [cargando,setCargando]=useState(false)
-    const [mostrarMas,setMostrarMas]=useState(10)
+    const [mostrarMas,setMostrarMas]=useState(4);
     const [display,setDisplay]=useState(true)
 
     useEffect(() => {
-        setItemType(itemType)
-        setMostrarMas(10)
+
         getProductos(itemType,mostrarMas).then(res => {
             setProductos(res);
-            
         }).catch(err => console.log(err))
         
         getProductos(itemType,10000).then(res => {
             setTotalProductos(res.length);
         }).catch(err => console.log(err))
+
+        setMostrarMas(4);
+
+
+
     }, [itemType]);// eslint-disable-line react-hooks/exhaustive-deps
 
 
     const cargarMasProductos=()=>{
         setCargando(true)
+
         getProductos(itemType,mostrarMas+5).then(res => {
+
           setTimeout(()=>{
             setMostrarMas(mostrarMas+5)
             setProductos(res);
             setCargando(false)
-          },1000)
+          },500)
+
         }).catch(err => console.log(err))
     }
 
@@ -69,11 +75,8 @@ const TiendaContainer = ({itemType, setItemType}) => {
                 {display && <div id='card-REF' style={{height:"2500",width:"300px",paddingTop:"10vw"}}></div>}
                 
                 {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
-                {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
-                {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
-                {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
-                
-                {totalProductos<mostrarMas?
+              
+                {mostrarMas<totalProductos?
                     <>
                         {cargando?
                             <div className="cargarMas loading">
