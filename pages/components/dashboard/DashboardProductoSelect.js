@@ -4,23 +4,21 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { editPropProduct } from '../../../firebase/FirebaseDB';
+import Swal from 'sweetalert2';
 
 const DashboardSelect = ({reload, setReload, propType, productId, placeholderValue}) => {
-    const [prenda, setPrenda] = useState("");
+    const [prenda, setPrenda] = useState(placeholderValue);
 
     const handleChange = (e) => {
-        setPrenda(e.target.value)
-        console.log(prenda)
-        // editPropProduct(productId,propType,prenda).then(res => {
-        //     console.log(productId, propType,prenda)
-        //     setReload(!reload);
-        // });
+        const input = e.target.value
+        editPropProduct(productId,propType,input).then(res => {
+            setReload(!reload);
+            setPrenda(input);
+            Swal.fire('Modificado correctamente!', '', 'success')
+        });
+
     }
 
-
-    useEffect(() => {
-        setPrenda(placeholderValue)
-    }, []);
 
     return (
 

@@ -35,9 +35,9 @@ export default function DashboardProductoItem ({producto,setReload, reload}) {
           }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
-                // removeProduct(producto.id).then(res => {
-                //     setReload(!reload);
-                // })
+                removeProduct(producto.id).then(res => {
+                    setReload(!reload);
+                })
               Swal.fire('Eliminado!', '', 'success')
             }
           })
