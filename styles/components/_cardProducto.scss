@@ -6,7 +6,8 @@
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;    transition: all 0.5s ease;
     margin: 2em;
-
+    animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s;
     .card-image{
         text-align: center;
         width: 40%;
