@@ -2,6 +2,11 @@
     width: 100%;
     text-align: center;
     color: black;
+    h1{
+        @include screen_768{
+            font-size: 6vw;
+        }
+    }
 }
 
 .tienda-container{
@@ -17,6 +22,7 @@
     }
     @include screen_768{
         flex-direction: column;
+        padding-top: 17vw;
     }
     
     .tienda-tabs-container{
@@ -32,9 +38,10 @@
         }
         @include screen_768{
             position: relative;
-            width: 90vw;
+            width: 100%;
             margin: auto;
-            padding-bottom: 2em;
+            padding: 1.5em 10vw 2em;
+            background: linear-gradient(black,#a0a0a0,#a0a0a0);
             &::-webkit-scrollbar {
                 width: 1px;
             }
