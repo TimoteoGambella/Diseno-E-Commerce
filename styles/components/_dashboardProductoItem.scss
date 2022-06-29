@@ -41,10 +41,15 @@
                     align-items: center;
                     margin: 0.8em;
                     transition: all 1s ease;
-
+                    width: 90%;
                     .form-input, h5{
                         margin-left: 0.5em;
 
+                    }
+
+
+                    label{
+                        color: black;
                     }
                 }
 
@@ -78,4 +83,14 @@
 
         }
     }
+}
+
+
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #e99b53 !important;
+    color: #e99b53 !important;
+}
+
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: black !important;
 }

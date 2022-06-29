@@ -4,9 +4,10 @@ import EditTwoToneIcon from '@mui/icons-material/EditTwoTone';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import { editPropProduct } from '../../../firebase/FirebaseDB';
+import Swal from 'sweetalert2'
 
-export default function DashboardProductoInput ({setReload, reload,title,type,palceholderValue,productId}){
-    const [propType, setPropType] = useState("");
+export default function DashboardProductoInput ({setReload, reload,title,propType,palceholderValue,productId}){
+    const [inputProp, setInputProp] = useState("");
     const [tagDisplay,settagDisplay] = useState(true);
     const [data,setData] = useState("");
 
@@ -16,31 +17,32 @@ export default function DashboardProductoInput ({setReload, reload,title,type,pa
     }
 
     const handleConfirm = () => {
-        editPropProduct(productId,propType,data).then(res => {
-            setPropType("");
+        editPropProduct(productId,inputProp,data).then(res => {
+            setInputProp("");
             setReload(!reload);
         });
+        Swal.fire('Modificado correctamente!', '', 'success')
         settagDisplay(true)
     }
 
 
     return(<div>
 
-            {tagDisplay && <h5>{title}: </h5>}
+            {tagDisplay && <h5>{title}</h5>}
 
-            {propType === type ?
+            {inputProp === propType ?
             
             <TextField className="title-dash-prod-item" size="medium" autoComplete="off" color="secondary"  id="nameId"  placeholder={palceholderValue} type="text" onChangeCapture={handleChangeData}/>
             
             : <h5>{palceholderValue}</h5>}
                             
-            {propType !== type ? 
+            {inputProp !== propType ? 
             
-            <EditTwoToneIcon fontSize="large" onClick={() => {setPropType(type), settagDisplay(false)}}/>
+            <EditTwoToneIcon fontSize="large" onClick={() => {setInputProp(propType), settagDisplay(false)}}/>
             
             : <div>
                 <CheckCircleOutlineOutlinedIcon onClick={handleConfirm}/>
-                <CancelOutlinedIcon onClick={()=> {setPropType(""), setData(""), settagDisplay(true)}}/>
+                <CancelOutlinedIcon onClick={()=> {setInputProp(""), setData(""), settagDisplay(true)}}/>
             </div>}
 
         </div>

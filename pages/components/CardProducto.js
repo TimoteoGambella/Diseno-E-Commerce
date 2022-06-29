@@ -12,7 +12,7 @@ export default function CardProducto({producto}) {
             <li>{`Corte: ${producto.corte}`}</li>
             <li>{`Material: ${producto.material}`}</li>
             <li>{`Precio: $${producto.precio}`}</li>
-            <li>{`Tipo: ${producto.tipo}`}</li>
+            <li>{`Tipo: ${producto.tipoPrenda}`}</li>
           </ul>
         </div>
       </div>
