@@ -10,16 +10,22 @@ const NavbarMenu = ({handleRanking}) => {
     return (
         <div className="navbar-container">
                 
-                <div className='logo'>
+                <div className='logo-benet'>
                     <Image src={logo} width={300} height={300} alt="Banner" onClick={()=>push("/")}/>
                 </div>
 
                 <div className='fondo-sepLeft'></div>
                 <div className="sepLeft2"></div>
                 <div className="sepLeft"></div>
+
+
+                <div className='logo-velvet'>
+                    {/* <Image src={logo} width={70} height={70} alt="Banner" onClick={()=>push("/")}/> */}
+                    <a href="https://www.instagram.com/velvet.ba/" target="_blank"><h1>VELVET</h1></a>
+                </div>
         </div>
     )
 }
 
-
+ 
 export default NavbarMenu;
