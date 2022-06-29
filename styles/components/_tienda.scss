@@ -15,6 +15,9 @@
     @include screen_985{
         padding-top: 20vw;
     }
+    @include screen_768{
+        flex-direction: column;
+    }
     
     .tienda-tabs-container{
         width: 15rem;
@@ -27,6 +30,15 @@
         @include screen_900{
             width: 11rem;
         }
+        @include screen_768{
+            position: relative;
+            width: 90vw;
+            margin: auto;
+            padding-bottom: 2em;
+            &::-webkit-scrollbar {
+                width: 1px;
+            }
+        }
 
         button{
             margin: 0.8vw;
@@ -36,6 +48,9 @@
             background-color: black;
             @include screen_985{
                 margin: 1vw;
+            }
+            @include screen_768{
+                padding: 0vw 1vw;
             }
            
             &:hover{
@@ -72,6 +87,11 @@
         @include screen_900{
             margin-left: 11rem;
         }
+        @include screen_768{
+            margin-left: 0rem;
+            margin-top: 0px;
+            padding-top: 0px;
+        }
     }
 
     .filtros-container{
@@ -83,6 +103,15 @@
         max-height: 18rem;
         &::-webkit-scrollbar {
             width: 3px;
+        }
+        @include screen_768{
+            flex-direction: row;
+            min-height: auto;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            &::-webkit-scrollbar {
+                height: 3px;
+            }
         }
     }
 }
