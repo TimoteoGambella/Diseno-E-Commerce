@@ -13,7 +13,7 @@ const TiendaContainer = ({itemType, setItemType}) => {
     const [totalProductos, setTotalProductos] = useState(0);
     const [cargando,setCargando]=useState(false)
     const [mostrarMas,setMostrarMas]=useState(10)
-    const [display,setDisplay]=useState(false)
+    const [display,setDisplay]=useState(true)
 
     useEffect(() => {
         setItemType(itemType)
@@ -41,12 +41,8 @@ const TiendaContainer = ({itemType, setItemType}) => {
     }
 
     const handleButton =(tipo)=>{
-        setItemType(tipo)
-        setDisplay(true)
         push("#card-REF")
-        setTimeout(() => {
-            setDisplay(false)
-        }, 200);
+        setItemType(tipo)
     }
 
     return (<>

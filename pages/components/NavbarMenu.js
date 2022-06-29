@@ -15,15 +15,8 @@ const NavbarMenu = ({handleRanking}) => {
                 </div>
 
                 <div className='fondo-sepLeft'></div>
-                <div className="sepLeft">
-                    <div></div>
-                </div>
-
-                <div className="navbar-nav">
-                    <button onClick={() => push("/Nosotros")}>Nosotros</button>
-                    <button onClick={() => push("/Tienda")}>Productos</button>
-                </div>
-
+                <div className="sepLeft2"></div>
+                <div className="sepLeft"></div>
         </div>
     )
 }

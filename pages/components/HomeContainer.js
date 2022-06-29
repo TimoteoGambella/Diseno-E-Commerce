@@ -10,7 +10,6 @@ const HomeContainer = () => {
 
 
             <div className='home-nav'>
-                <Link href="/Nosotros">NOSOTROS</Link>
                 <Link href="/Tienda">PRODUCTOS</Link>
             </div>
         </div>
