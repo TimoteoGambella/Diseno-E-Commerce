@@ -13,7 +13,7 @@ const HomeContainer = () => {
 
             <div className='home-nav'>
                 <div className='logo-home'>
-                    <Image src={logo} width={300} height={300} alt="Banner" onClick={()=>push("/")}/>
+                    <Image src={logo} width={300} height={300} alt="Banner"/>
                     <div></div>
                 </div>
                 <Link href="/Tienda">PRODUCTOS</Link>
