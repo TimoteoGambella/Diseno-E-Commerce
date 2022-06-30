@@ -3,6 +3,9 @@
     text-align: center;
     color: black;
     h1{
+        @include screen_900{
+            font-size: 4vw;
+        }
         @include screen_768{
             font-size: 6vw;
         }
@@ -34,7 +37,7 @@
         flex-direction: column;
         position: fixed;
         @include screen_900{
-            width: 11rem;
+            width: 13rem;
         }
         @include screen_768{
             position: relative;
@@ -92,7 +95,7 @@
             width: 0px;
         }
         @include screen_900{
-            margin-left: 11rem;
+            margin-left: 13rem;
         }
         @include screen_768{
             margin-left: 0rem;
@@ -119,6 +122,11 @@
             &::-webkit-scrollbar {
                 height: 3px;
             }
+        }
+    }
+    #card-REF{
+        @include screen_768{
+            margin-top: -5vw;
         }
     }
 }
