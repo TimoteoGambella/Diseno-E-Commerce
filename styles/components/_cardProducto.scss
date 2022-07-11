@@ -11,29 +11,54 @@
     // animation-duration: 1s;
     .card-image{
         text-align: center;
-        width: 40%;
+        width: 25%;
+        padding: 1vw;
+        @include screen_900{
+            width: 30%;
+        }
+        @include screen_620{
+            width: 35%;
+        }
         span{
+            width: 100% !important;
             height: 100% !important;
         }
         img{
+            width: 100% !important;
             height: 100% !important;
         }
     }
 
     .card-info{
         width: 60%;
-        height: 18em;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         h1{
             text-align: center;
+            font-size: 4vw;
+            @include screen_900{
+                font-size: 5vw;
+                padding-bottom: 4vw;
+            }
+            @include screen_620{
+                font-size: 5.5vw;
+                padding-bottom: 4vw;
+            }
         }
 
         ul{
             text-align: left;
+            padding-left: 3vw;
             li{
                 list-style: none;
+                font-size: 1.5vw;
+                @include screen_900{
+                    font-size: 2vw;
+                }
+                @include screen_620{
+                    font-size: 3vw;
+                }
             }
         } 
     }

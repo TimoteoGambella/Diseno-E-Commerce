@@ -40,6 +40,23 @@
   }
 }
 
+@mixin screen_620 {
+  @media (max-width: 620px){
+    @content;
+  }
+}
+
+@mixin screen_470 {
+  @media (max-width: 470px){
+    @content;
+  }
+}
+
+@mixin screen_420 {
+  @media (max-width: 420px){
+    @content;
+  }
+}
 // @mixin desktop-coll {
 //   @media (min-width: 1201px) and (max-width: 1280px) {
 //     @content;

@@ -26,8 +26,11 @@
     }
     @include screen_768{
       margin-top: 18vw;
-      
     }
+    @include screen_620{
+      width: 28vw;
+      margin-top: 24vw;
+  }
   }
 
   .logo-velvet{
@@ -52,10 +55,15 @@
       @include screen_768{
         font-size: 4.5vw;
       }
+      @include screen_620{
+        font-size: 5.5vw;
+      }
     }
     @include screen_768{
       margin-top: 18vw;
-      font-size: 1999vw;
+    }
+    @include screen_470{
+      margin-top: 22vw;
     }
   }
 
@@ -72,6 +80,9 @@
     }
     @include screen_768{
       height: 40vw;
+    }
+    @include screen_620{
+      height: 53vw;
     }
   }
   .sepLeft{

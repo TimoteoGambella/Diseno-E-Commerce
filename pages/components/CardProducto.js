@@ -22,7 +22,6 @@ export default function CardProducto({producto}) {
           <h1>{producto.nombre}</h1>
           <ul>
             <li>{`Corte: ${producto.corte}`}</li>
-            <li>{`Material: ${producto.material}`}</li>
             <li>{`Precio: $${producto.precio}`}</li>
             <li>{`Tipo: ${producto.tipoPrenda}`}</li>
           </ul>

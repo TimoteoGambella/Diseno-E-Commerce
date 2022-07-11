@@ -75,7 +75,7 @@ const TiendaContainer = ({itemType, setItemType}) => {
                 {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
                 {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
               
-                {mostrarMas<totalProductos?
+                {/* {mostrarMas<totalProductos?
                     <>
                         {cargando?
                             <div className="cargarMas loading">
@@ -87,7 +87,7 @@ const TiendaContainer = ({itemType, setItemType}) => {
                             </div> 
                         } 
                     </>:<></>
-                }
+                } */}
             </div>
         
         </div>
