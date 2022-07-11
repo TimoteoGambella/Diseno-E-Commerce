@@ -29,8 +29,12 @@
     }
     @include screen_620{
       width: 28vw;
-      margin-top: 24vw;
-  }
+      margin-top: 24vw;  
+    }
+    @include screen_420{
+      width: 30vw;
+      margin-top: 28vw;  
+    }
   }
 
   .logo-velvet{
@@ -58,12 +62,18 @@
       @include screen_620{
         font-size: 5.5vw;
       }
+      @include screen_420{
+        font-size: 6.5vw;
+      }
     }
     @include screen_768{
       margin-top: 18vw;
     }
     @include screen_470{
       margin-top: 22vw;
+    }
+    @include screen_420{
+      margin-top: 25vw;
     }
   }
 
@@ -83,6 +93,9 @@
     }
     @include screen_620{
       height: 53vw;
+    }
+    @include screen_420{
+      height: 60vw;
     }
   }
   .sepLeft{

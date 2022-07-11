@@ -9,6 +9,10 @@
         @include screen_768{
             font-size: 6vw;
         }
+        @include screen_620{
+            font-size: 7.5vw;
+            padding-top: 3vw;
+        }
     }
 }
 
@@ -52,7 +56,10 @@
         @include screen_620{
             margin-top: 5vw;
         }
-
+        @include screen_420{
+            font-size: 1.4rem;
+        }
+        
         button{
             margin: 0.8vw;
             border-color: #d1b797;
