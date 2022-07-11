@@ -4,7 +4,7 @@ import { collection, getDocs, orderBy, where, query, addDoc, doc,setDoc,Timestam
 import {getStorage, ref, uploadBytes, getDownloadURL, deleteObject} from "firebase/storage"
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBC9WURoAHohukEyytTJGO-pfQXDAXf-6E",
+    apiKey: process.env.FIREBASE,
     authDomain: "benet-55104.firebaseapp.com",
     projectId: "benet-55104",
     storageBucket: "benet-55104.appspot.com",

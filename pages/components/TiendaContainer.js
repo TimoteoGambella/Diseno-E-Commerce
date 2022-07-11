@@ -49,49 +49,36 @@ const TiendaContainer = ({itemType, setItemType}) => {
         setItemType(tipo)
     }
 
-    return (<>
+    return (
+        <>
+            {itemType !== undefined && 
+                <div className="tienda-container">
+                    <div className="tienda-tabs-container">
+                        <div className='tienda-title'>
+                            <h1>{itemType.toUpperCase()}</h1>
+                        </div>
 
-        <div className="tienda-container">
-            <div className="tienda-tabs-container">
-                <div className='tienda-title'>
-                    <h1>{itemType.toUpperCase()}</h1>
+                        <div className='filtros-container'>
+                            <button onClick={() => {handleButton("Todo")}}>Todo</button>
+                            <button onClick={() => {handleButton("Remeras")}}>Remeras</button>
+                            <button onClick={() => {handleButton("Joggins")}}>Joggins</button>
+                            <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
+                            <button onClick={() => {handleButton("Gorras")}}>Gorras</button>
+                            <button onClick={() => {handleButton("Bermudas")}}>Bermudas</button>
+                        </div>
+                    </div>
+
+                    <div className="tienda">
+                        {display && <div id='card-REF' style={{width:"300px",paddingTop:"10vw"}}></div>}
+                        
+                        {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
+                        {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
+                        {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
+                        {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
+                    </div>
                 </div>
-
-                <div className='filtros-container'>
-                    <button onClick={() => {handleButton("Todo")}}>Todo</button>
-                    <button onClick={() => {handleButton("Remeras")}}>Remeras</button>
-                    <button onClick={() => {handleButton("Joggins")}}>Joggins</button>
-                    <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
-                    <button onClick={() => {handleButton("Gorras")}}>Gorras</button>
-                    <button onClick={() => {handleButton("Bermudas")}}>Bermudas</button>
-                </div>
-            </div>
-
-            <div className="tienda">
-                {display && <div id='card-REF' style={{width:"300px",paddingTop:"10vw"}}></div>}
-                
-                {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
-                {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
-                {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
-                {productos.map(producto => <CardProducto producto={producto}  key={producto.id}></CardProducto>) }
-              
-                {/* {mostrarMas<totalProductos?
-                    <>
-                        {cargando?
-                            <div className="cargarMas loading">
-                                <Image src={loading} alt="loading" width={50} height={50}/>
-                            </div>
-                            :
-                            <div className="cargarMas">
-                                <p onClick={()=>{cargarMasProductos()}}>CARGAR MÁS</p>
-                            </div> 
-                        } 
-                    </>:<></>
-                } */}
-            </div>
-        
-        </div>
-    </>
+            }
+        </>
     )
 }
 
