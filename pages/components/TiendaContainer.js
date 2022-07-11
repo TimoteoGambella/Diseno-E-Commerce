@@ -12,7 +12,7 @@ const TiendaContainer = ({itemType, setItemType}) => {
     const [productos, setProductos] = useState([]);
     const [totalProductos, setTotalProductos] = useState(0);
     const [cargando,setCargando]=useState(false)
-    const [mostrarMas,setMostrarMas]=useState(4);
+    const [mostrarMas,setMostrarMas]=useState(5);
     const [display,setDisplay]=useState(true)
 
     useEffect(() => {
@@ -62,10 +62,8 @@ const TiendaContainer = ({itemType, setItemType}) => {
                     <button onClick={() => {handleButton("Remeras")}}>Remeras</button>
                     <button onClick={() => {handleButton("Joggins")}}>Joggins</button>
                     <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
-                    <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
-                    <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
-                    <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
-                    <button onClick={() => {handleButton("Camperas")}}>Camperas</button>
+                    <button onClick={() => {handleButton("Gorras")}}>Gorras</button>
+                    <button onClick={() => {handleButton("Bermudas")}}>Bermudas</button>
                 </div>
             </div>
 

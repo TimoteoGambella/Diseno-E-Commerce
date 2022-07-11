@@ -3,7 +3,7 @@
     height: 100vh;
 
     --opacidad-negro: 0.5;
-    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../../public/img/local4.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../../public/img/local4.png");
     background-size: cover;
     overflow: hidden;
     
@@ -28,7 +28,7 @@
         a{
             text-decoration: none;
             font-size: 6vw;
-            color: #e99b53;
+            color: rgb(201, 144, 83);
             animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
             animation-duration: 1s;
             transition: all 0.5s ease;

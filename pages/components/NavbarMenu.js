@@ -21,7 +21,7 @@ const NavbarMenu = ({handleRanking}) => {
 
                 <div className='logo-velvet'>
                     {/* <Image src={logo} width={70} height={70} alt="Banner" onClick={()=>push("/")}/> */}
-                    <a href="https://www.instagram.com/velvet.ba/" target="_blank" rel="noreferrer"><h1>VELVET</h1></a>
+                    <a href="https://www.instagram.com/martascudiero/" target="_blank" rel="noreferrer"><h1>MARCA</h1></a>
                 </div>
         </div>
     )
